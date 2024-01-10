@@ -10,29 +10,58 @@
         * {
             padding: 0;
             margin: 0;
-            text-align: center;
+            /* direction: rtl; */
+            background-color: #FEFEFE;
+        }
+
+        .logo {
+            max-width: 150px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .qr {
+            max-width: 250px;
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translateY(-50%);
+        }
+
+        .construction {
+            width: 80%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            animation: 2s linear 0s infinite alternate upDown;
+            z-index: -1;
         }
 
         img {
-            max-width: 95%;
-            max-height: 95vh;
-            animation: 5s linear 0s infinite alternate upDown;
+            width: 100%;
         }
 
         @keyframes upDown {
             from {
-                transform: translateY(0);
+                bottom: 0;
+                /* transform: translateY(0); */
             }
 
             to {
-                transform: translateY(5vh);
+                bottom: 30px;
+                /* transform: translateY(5vh); */
             }
         }
     </style>
 </head>
 
 <body>
-    <div><img src="images/UC.jpeg" alt="under construction"></div>
+    <img class="logo" src="images/cornerLogo2.jpg" alt="corner logo">
+    <div>
+        <img class="qr" src="images/soonQR2.jpg" alt="">
+        <img class="construction" src="images/toolsCons2.jpg" alt="under construction">
+    </div>
 </body>
 
 </html>
